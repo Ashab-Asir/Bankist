@@ -71,9 +71,10 @@ const createUserName = function (accs) {
   });
 };
 createUserName(accounts);
-const displayMovements = function (movements) {
+const displayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-  movements.forEach(function (mov, i) {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `
         <div class="movements__row">
@@ -180,6 +181,14 @@ btnClose.addEventListener('click', function (e) {
     accounts.splice(index, 1);
     containerApp.style.opacity = 0;
   }
+});
+
+// Implement sort fuctinality
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  displayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
