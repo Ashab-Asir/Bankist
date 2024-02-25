@@ -1,10 +1,16 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
     .summary__value {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-right: 1.6rem
     }
     .balance__value {
         font-size: 4rem;
     }
+    .summary__label {
+        font-size: 1rem;
+        margin-right: 0.6rem;
+    }
+    
 }
 
 @media only screen and (max-width: 900px) {
@@ -50,8 +56,8 @@
 
 @media only screen and (max-width: 500px) {
     .summary__value {
-        font-size: 1.3rem;
-        margin-right: 1.2rem;
+        font-size: 1rem;
+        margin-right: 1rem;
     }
     .summary__label {
         font-size: 1rem;
@@ -61,7 +67,33 @@
         padding: 0 0.1rem;
     }
     .btn--sort {
-        margin-left: 0;
-        
+        margin-left: 0; 
+    }
+    .movements__type {
+        font-size: 1rem;
+        padding: 0.1rem .5rem;
+  
+        margin-right: 1rem;
+    }
+
+    .movements__value {
+        font-size: 1.2rem;
+    }
+    .movements__row {
+        padding: 1.8rem 2rem;
+    }
+
+    .btn--sort {
+        font-size: 1rem;
+    }
+
+    .balance__value {
+        font-size: 2rem;
+    }
+    .balance__label {
+        font-size: 1.4rem;
+    }
+    .balance__date {
+        font-size: 1.2rem;
     }
 }
